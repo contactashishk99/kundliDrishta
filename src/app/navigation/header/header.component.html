@@ -1,0 +1,29 @@
+<button mat-button [matMenuTriggerFor]="HOME">Home</button>
+<mat-menu #HOME="matMenu" yPosition="below">
+    <button mat-menu-item>Palmistry</button>
+    <button mat-menu-item>Numrology</button>
+    <button mat-menu-item>Horoscope</button>
+    <button mat-menu-item>Mate</button>
+    <button mat-menu-item>Gem</button>
+    <button mat-menu-item routerLink="/contactUs">Contact Us</button>
+    
+</mat-menu>
+
+<button mat-button routerLink="/query">Questions</button>
+<!-- <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+</mat-menu> -->
+
+<button mat-button [matMenuTriggerFor]="KUNDLI">Kundli Analysis</button>
+<mat-menu #KUNDLI="matMenu" yPosition="below">
+    <button mat-menu-item>Yog</button>
+    <button mat-menu-item>Dosh</button>
+    <button mat-menu-item>Type of kundli</button>
+</mat-menu>
+
+<button mat-button >Remarks</button>
+<!-- <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+</mat-menu> -->
