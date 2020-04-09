@@ -24,6 +24,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { HomeComponentsComponent } from './smallParts/home-components/home-components.component';
 import { QueryFormComponent } from './smallParts/query-form/query-form.component';
 import { ContactUsComponent } from './smallParts/contact-us/contact-us.component';
+import { FormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { NgbModule , NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import * as moment from 'moment';
 
 @NgModule({
   declarations: [
@@ -39,11 +45,9 @@ import { ContactUsComponent } from './smallParts/contact-us/contact-us.component
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule,
-    MatCardModule,
-    MatButtonModule,
-    MatInputModule,
-    MatFormFieldModule
+    MatMenuModule, MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatDatepickerModule,
+    FormsModule, MatNativeDateModule, MatMomentDateModule , 
+    NgbModule , NgbPaginationModule, NgbAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

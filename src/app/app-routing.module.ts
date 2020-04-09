@@ -7,7 +7,7 @@ import { ContactUsComponent } from './smallParts/contact-us/contact-us.component
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'query', component: QueryFormComponent},
   { path: 'contactUs', component: ContactUsComponent},
