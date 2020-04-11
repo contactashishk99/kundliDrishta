@@ -27,6 +27,7 @@ $background: ((mainBackgroundBlack, #282828, none),(lightGrayBackground, #6f6f6f
   }
 }
 
+$mainTextFieldBg: #6d6d6e;
 
 html {  
     -webkit-text-size-adjust: 100%;
@@ -55,6 +56,10 @@ html {
 
   .fullWidth{
       width: 100% !important;
+  }
+
+  .fullHeight{
+    height: 100% !important;
   }
 
   .verticallyCenter {
@@ -127,7 +132,6 @@ html {
     position: relative;
   }
   
-
   .submitButton {
     width: 10rem;
     height: 3.5rem;
@@ -138,5 +142,13 @@ html {
     float: right;
     cursor: pointer;
     border: .065rem solid #fff;
+  }
+
+  .circularGradiantBackground{
+    background: radial-gradient(circle, yellow, red);
+  }
+
+  .form-control {
+    background-color: transparent;
   }
   

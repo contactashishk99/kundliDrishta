@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { NgForm, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-query-form',
@@ -10,15 +11,16 @@ import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 export class QueryFormComponent implements OnInit {
   
   model: NgbDateStruct;
-  time: NgbTimeStruct = {hour: 13, minute: 30, second: 30};
-  seconds = true;
+  time: NgbTimeStruct = {hour: 12, minute: 0, second: 0};
   constructor() { }
 
-  toggleSeconds() {
-    this.seconds = !this.seconds;
-}
-  
   ngOnInit(): void {
+  }
+
+  onSubmitQuery(form: NgForm){
+    if(form.valid) {
+    console.log(form.value);
+    }
   }
 
 }
