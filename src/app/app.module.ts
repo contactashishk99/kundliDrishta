@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +31,12 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { NgbModule , NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import * as moment from 'moment';
-
+import { DatabeaseService } from './service/databease.service';
+import { Utilities } from './service/utilites.service'; 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,9 +53,12 @@ import * as moment from 'moment';
     BrowserAnimationsModule,
     MatMenuModule, MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatDatepickerModule,
     FormsModule, MatNativeDateModule, MatMomentDateModule , 
-    NgbModule , NgbPaginationModule, NgbAlertModule
+    NgbModule , NgbPaginationModule, NgbAlertModule,
+    HttpClientModule, 
+    AngularFireModule.initializeApp(environment.firebaseConfig), 
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [DatabeaseService, Utilities],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
